@@ -18,7 +18,10 @@ class CreateClothesTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->unsignedFloat('price');
-            $table->foreignId('collection_id')->constrained('collections')->cascadeOnDelete();
+            $table->foreignId('collection_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

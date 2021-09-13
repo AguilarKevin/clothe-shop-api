@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Clothe extends Model
 {
@@ -24,12 +25,19 @@ class Clothe extends Model
         return $this->belongsTo(Collection::class);
     }
 
-    public function colors():HasMany{
+    public function colors(): HasMany
+    {
         return $this->hasMany(ClotheColor::class);
     }
 
-    public function discount():HasOne{
+    public function discount(): HasOne
+    {
         return $this->hasOne(Discount::class);
+    }
+
+    public function clotheMedia(): MorphMany
+    {
+        return $this->morphMany(Media::class, 'mediable');
     }
 
 }

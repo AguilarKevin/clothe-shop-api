@@ -15,7 +15,7 @@ class CreateDiscountsTable extends Migration
     {
         Schema::create('discounts', function (Blueprint $table) {
             $table->id();
-            $table->float('discount');
+            $table->float('percentage');
             $table->foreignId('clothe_id')->constrained('clothes')->cascadeOnDelete();
             $table->timestamps();
         });

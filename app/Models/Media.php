@@ -4,10 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Media extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['clothe_id','host','path', 'mimetype'];
+    protected $fillable = ['mediable_type', 'mediable_id', 'host', 'path', 'mimetype'];
+
+    public function mediable(): MorphTo
+    {
+        return $this->morphTo();
+    }
 }

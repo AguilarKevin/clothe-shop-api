@@ -15,7 +15,7 @@ class CreateMediaTable extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('clothe_id')->constrained('clothes')->cascadeOnDelete();
+            $table->morphs('mediable');
             $table->string('host');
             $table->string('path');
             $table->string('mimetype');

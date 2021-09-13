@@ -13,7 +13,7 @@ class CreateClotheColorTable extends Migration
      */
     public function up()
     {
-        Schema::create('clothe_color', function (Blueprint $table) {
+        Schema::create('clothe_colors', function (Blueprint $table) {
             $table->id();
             $table->string('color_hex');
             $table->foreignId('clothe_id')->constrained('clothes')->cascadeOnDelete();
