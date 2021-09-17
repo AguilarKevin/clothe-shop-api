@@ -18,7 +18,7 @@ class DiscountResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'price' => $this->price,
-            'discount' => $this->price - ($this->price * $this->discount->percentage) ?? null,
+            'discount' => round($this->price - ($this->price * $this->discount->percentage), 2) ?? null,
             'media' => new MediaCollection($this->clotheMedia),
         ];
     }

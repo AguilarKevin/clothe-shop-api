@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
             for ($i = 0; $i < 5; $i++) {
                 $clothe->clotheMedia()->create([
                     'mediable_type' => 'clothe',
-                    'host' => 'https://unsplash.com/',
+                    'host' => 'https://images.unsplash.com',
                     'path' => Arr::random($media),
                     'mimetype' => 'image',
                 ]);
