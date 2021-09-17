@@ -20,17 +20,27 @@ class DatabaseSeeder extends Seeder
             ];
 
         $collectionMedia = [
-            '/photos/FeUC_FpHLJA', '/photos/qJcpJUuY3A0', '/photos/x230a__cFO0', '/photos/9w20MZ0lsK8',
-            '/photos/TT-ROxWj9nA', '/photos/FoF0w-d6Z74', '/photos/MmeCrtYlIpE', '/photos/XCU9ZV_ys5w',
-            '/photos/6Md6LUpsLp4', '/photos/ZGa9d1a_4tA', '/photos/QCrLpiv-8HM', '/photos/u1V0pb5Vakg',
-            '/photos/cZZMZwgv08o', '/photos/QfozoU3hUgw'
+            '/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80',
+            '/photo-1511676330122-8a013416a2d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80',
+            '/photo-1506634572416-48cdfe530110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=332&q=80',
+            '/photo-1514794749374-fb67509dbb7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
+            '/photo-1604888989902-6c8d8617e02a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80',
+            '/photo-1613928317649-48a96fc628fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80'
         ];
 
         $media = [
-            '/photos/gCeCpP15V1o', '/photos/xFmXLq_KJxg', '/photos/Wr0TpKqf26s', '/photos/ZX5hQiUmDPY',
-            '/photos/QarKZGj0mzk', '/photos/3oejsU5OQVk', '/photos/UP9DtTjRYpI', '/photos/m1m2EZOZVwA',
-            '/photos/a-QH9MAAVNI', '/photos/J2-wAQDckus', '/photos/mWYhrOiAgmA', '/photos/LxVxPA1LOVM',
-            '/photos/LV_4qM5Gf9c', '/photos/gUPiTDBdRe4', '/photos/_BDBEP0ePQc', '/photos/NA9dtyWAFV4'
+            '/photo-1562157873-818bc0726f68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80',
+            '/photo-1564859228273-274232fdb516?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80',
+            '/photo-1620799140188-3b2a02fd9a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80',
+            '/photo-1618354691551-44de113f0164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=358&q=80',
+            '/photo-1611312449412-6cefac5dc3e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=338&q=80',
+            '/photo-1560769629-975ec94e6a86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80',
+            '/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+            '/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+            '/photo-1548883354-7622d03aca27?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+            '/photo-1473966968600-fa801b869a1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+            '/photo-1616178193482-4dad15347c26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80',
+            '/photo-1575468886310-6c584b4e3919?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80',
         ];
 
         Collection::factory(8)->create();
@@ -40,7 +50,7 @@ class DatabaseSeeder extends Seeder
             for ($i = 0; $i < 5; $i++) {
                 $collection->collectionMedia()->create([
                     'mediable_type' => 'collection',
-                    'host' => 'https://unsplash.com/',
+                    'host' => 'https://images.unsplash.com',
                     'path' => Arr::random($collectionMedia),
                     'mimetype' => 'image',
                 ]);

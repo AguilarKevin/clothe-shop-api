@@ -10,26 +10,13 @@ use Illuminate\Http\Request;
 
 class CollectionController extends Controller
 {
-
     public function index()
     {
         return new CollectionCollection(Collection::query()->get());
     }
 
-    public function store(Request $request)
-    {
-    }
-
     public function show(Collection $collection)
     {
         return new CollectionResource($collection);
-    }
-
-    public function update(Request $request, $id)
-    {
-    }
-
-    public function destroy($id)
-    {
     }
 }
