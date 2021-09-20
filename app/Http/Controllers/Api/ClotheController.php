@@ -22,6 +22,8 @@ class ClotheController extends Controller
 
     public function show(Clothe $clothe)
     {
+        $clothe->load(['discount', 'clotheMedia']);
+
         return new ClotheResource($clothe);
     }
 

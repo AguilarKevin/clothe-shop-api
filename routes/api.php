@@ -15,4 +15,6 @@ Route::apiResource('collections', CollectionController::class)->only(['index', '
 
 Route::apiResource('collections/clothe', ClotheController::class);
 
+Route::apiResource('clothe', ClotheController::class);
+
 Route::apiResource('discounts', DiscountsController::class);

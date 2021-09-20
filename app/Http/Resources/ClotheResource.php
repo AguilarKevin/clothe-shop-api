@@ -13,7 +13,7 @@ class ClotheResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
-            'discount' => $this->price - ($this->price * $this->discount->percentage) ?? null,
+            'discount' => $this->discount->percentage ?? null,
             'media' => new MediaCollection($this->clotheMedia),
             'colors' => new ClotheColorCollection($this->colors),
         ];
