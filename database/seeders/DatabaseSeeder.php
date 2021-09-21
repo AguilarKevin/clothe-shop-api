@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Clothe;
 use App\Models\Collection;
+use App\Models\Product;
+use App\Models\Size;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
 
@@ -43,10 +47,28 @@ class DatabaseSeeder extends Seeder
             '/photo-1575468886310-6c584b4e3919?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80',
         ];
 
-        Collection::factory(8)->create();
+        $brands = ['addidas', 'nike', 'pull&bear', 'bershka', 'forever21', 'calvin klein'];
+
+        foreach($brands as $brandName){
+            $brand= Brand::create([
+                'name' =>  $brandName,
+            ]);
+            $brand->save();
+        }
+
+        $categories = ['shirts', 'wearables', 'shoes', 'pants', 'other'];
+
+        foreach($categories as $categoryName){
+            $category = Category::create([
+                'type' =>  $categoryName,
+            ]);
+            $category->save();
+        }
+
+        Collection::factory(10)->create();
 
         $collections = Collection::query()->get();
-        $collections->each(function ($collection, $key) use ($collectionMedia) {
+        $collections->each(function ($collection) use ($collectionMedia) {
             for ($i = 0; $i < 5; $i++) {
                 $collection->collectionMedia()->create([
                     'mediable_type' => 'collection',
@@ -57,19 +79,28 @@ class DatabaseSeeder extends Seeder
             }
         });
 
-        Clothe::factory(40)->create();
+        $sizes = ['xs', 's', 'm', 'l', 'xl', '2xl'];
+        foreach($sizes as $sizeName){
+            $size = Size::create([
+                'size_name' =>  $sizeName,
+            ]);
+            $size->save();
+        }
 
-        $clothes = Clothe::query()->get();
+        Product::factory(100)->create();
 
-        $clothes->each(function ($clothe, $key) use ($colors, $media) {
-            $num_colors = Arr::random([1, 2, 3, 4, 5]);
+        $products = Product::query()->get();
+
+        $products->each(function ($product) use ($colors, $media) {
+            $num_colors = Arr::random([1, 2, 3, 4, 5, 6]);
             for ($i = 0; $i < $num_colors; $i++) {
-                $clothe->colors()->create(['color_hex' => Arr::random($colors)]);
+                $product->colors()->create(['hex' => Arr::random($colors)]);
             }
+            $product->sizes()->toggle(Size::pluck('id')->random($num_colors));
 
             for ($i = 0; $i < 5; $i++) {
-                $clothe->clotheMedia()->create([
-                    'mediable_type' => 'clothe',
+                $product->productMedia()->create([
+                    'mediable_type' => 'product',
                     'host' => 'https://images.unsplash.com',
                     'path' => Arr::random($media),
                     'mimetype' => 'image',
@@ -77,8 +108,11 @@ class DatabaseSeeder extends Seeder
             }
 
             if (Arr::random([1, 2]) == 1) {
-                $clothe->discount()->create(['percentage' => Arr::random([0.10, 0.30, 0.05, 0.40, 0.50])]);
+                $product->discount =
+                    round($product->price - ($product->price * Arr::random([0.10, 0.30, 0.05, 0.40, 0.50])), 2);
             }
+
+            $product->save();
         });
 
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClotheColorTable extends Migration
+class CreateSizesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateClotheColorTable extends Migration
      */
     public function up()
     {
-        Schema::create('clothe_colors', function (Blueprint $table) {
+        Schema::create('sizes', function (Blueprint $table) {
             $table->id();
-            $table->string('color_hex');
-            $table->foreignId('clothe_id')->constrained('clothes')->cascadeOnDelete();
+            $table->string('size_name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateClotheColorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clothe_color');
+        Schema::dropIfExists('sizes');
     }
 }

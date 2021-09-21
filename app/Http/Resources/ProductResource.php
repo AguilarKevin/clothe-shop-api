@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ClotheResource extends JsonResource
+class ProductResource extends JsonResource
 {
     public function toArray($request)
     {
@@ -13,9 +13,9 @@ class ClotheResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
-            'discount' => $this->discount->percentage ?? null,
+            'discount' => $this->discount ?? 0,
             'media' => new MediaCollection($this->clotheMedia),
-            'colors' => new ClotheColorCollection($this->colors),
+            'colors' => new ProductColorCollection($this->colors),
         ];
     }
 }

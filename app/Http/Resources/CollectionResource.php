@@ -14,7 +14,7 @@ class CollectionResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'media' => new MediaCollection($this->collectionMedia),
-            'clothes' => new ClotheCollection($this->clothes),
+            'products' => new ProductCollection($this->clothes),
         ];
     }
 }
