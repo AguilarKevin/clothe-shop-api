@@ -13,7 +13,7 @@ class ClotheController extends Controller
 
     public function index()
     {
-        return new ClotheCollection(Clothe::query()->latest()->with(['discount, clotheMedia'])->paginate(10));
+        return new ClotheCollection(Clothe::query()->latest()->with(['discount', 'clotheMedia'])->paginate(15));
     }
 
     public function store(Request $request)
