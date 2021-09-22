@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\ClotheController;
+use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\CollectionController;
 use App\Http\Controllers\Api\DiscountsController;
 use Illuminate\Http\Request;
@@ -11,12 +11,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('collections', CollectionController::class)->only(['index', 'show']);
-
-Route::apiResource('collections/item', ClotheController::class);
-
-Route::apiResource('clothe', ClotheController::class)->only(['show']);
-
-Route::apiResource('clothes', ClotheController::class)->only(['index']);
+Route::apiResource('products', ProductController::class)->only(['index','show']);
 
 Route::apiResource('discounts', DiscountsController::class);

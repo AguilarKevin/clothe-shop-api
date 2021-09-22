@@ -9,6 +9,6 @@ class ProductColorResource extends JsonResource
 
     public function toArray($request)
     {
-        return $this->color_hex;
+        return $this->hex;
     }
 }

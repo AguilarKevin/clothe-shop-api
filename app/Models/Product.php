@@ -34,7 +34,7 @@ class Product extends Model
         return $this->hasMany(ProductColor::class);
     }
 
-    public function productMedia(): MorphMany
+    public function media(): MorphMany
     {
         return $this->morphMany(Media::class, 'mediable');
     }
@@ -42,10 +42,7 @@ class Product extends Model
     public function sizes(): BelongsToMany
     {
         return $this->belongsToMany(
-            Size::class,
-            'product_size',
-            'size_id',
-            'product_id'
+            Size::class
         );
     }
 
