@@ -13,4 +13,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('products', ProductController::class)->only(['index','show']);
 
+Route::apiResource('collections', CollectionController::class)->only(['index','show']);
+
 Route::apiResource('discounts', DiscountsController::class);

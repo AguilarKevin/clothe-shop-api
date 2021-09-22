@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
         $collections = Collection::query()->get();
         $collections->each(function ($collection) use ($collectionMedia) {
             for ($i = 0; $i < 5; $i++) {
-                $collection->collectionMedia()->create([
+                $collection->media()->create([
                     'mediable_type' => 'collection',
                     'host' => 'https://images.unsplash.com',
                     'path' => Arr::random($collectionMedia),
@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
             $product->sizes()->toggle(Size::pluck('id')->random($num_colors));
 
             for ($i = 0; $i < 5; $i++) {
-                $product->productMedia()->create([
+                $product->media()->create([
                     'mediable_type' => 'product',
                     'host' => 'https://images.unsplash.com',
                     'path' => Arr::random($media),
