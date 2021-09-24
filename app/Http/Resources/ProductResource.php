@@ -16,6 +16,7 @@ class ProductResource extends JsonResource
             'discount' => $this->discount ?? 0,
             'media' => new MediaCollection($this->media),
             'colors' => new ProductColorCollection($this->colors),
+            'sizes' => new SizeCollection($this->sizes)
         ];
     }
 }
