@@ -12,7 +12,6 @@ class SizeResource extends JsonResource
         return [
             'id'=> $this->id,
             'size' => $this->size_name,
-
         ];
     }
 }
